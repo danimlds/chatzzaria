@@ -1,0 +1,116 @@
+/* ------------------- FONTES ------------------- */
+/* Importa a fonte Montserrat do Google Fonts, com todos os pesos e estilos */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ------------------- RESET GLOBAL ------------------- */
+* {
+    /* Seletor global: aplica para todos os elementos */
+    margin: 0;           /* Remove margens padrão do navegador */
+    padding: 0;          /* Remove padding padrão do navegador */
+    box-sizing: border-box; /* Faz com que largura e altura incluam padding e border */
+    font-family: "Montserrat", serif; /* Define a fonte padrão da página */
+}
+
+/* ------------------- HEADER ------------------- */
+#cabecalho>img {
+    margin: 30px 0; /* Espaçamento em cima e embaixo do logo */
+}
+
+/* ------------------- CONTAINERS ------------------- */
+.container {
+    width: 90%;         /* Largura relativa à tela */
+    max-width: 1440px;  /* Largura máxima para não esticar demais em telas grandes */
+    margin: 0 auto;     /* Centraliza horizontalmente */
+}
+
+/* ------------------- CONTEÚDO PRINCIPAL ------------------- */
+#conteudo_principal {
+    /* height = altura da tela - altura do header - altura do footer */
+    height: calc(100vh - 143px - 79px);
+}
+
+/* ------------------- FORMULÁRIO ------------------- */
+/* ">" seleciona apenas os filhos diretos do elemento */
+#conteudo_principal>form {
+    height: 100%;       /* Ocupa toda a altura do conteúdo principal */
+    width: 100%;        /* Ocupa toda a largura */
+    display: flex;      /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza os filhos em coluna */
+    gap: 30px;          /* Espaço entre os elementos filhos */
+}
+
+/* ------------------- DIV DE CONVERSA ------------------- */
+#div_conversa {
+    width: 100%;        /* Largura total */
+    height: 100%;       /* Altura total */
+    overflow-y: auto;   /* Adiciona scroll vertical se necessário */
+}
+
+/* ------------------- FOOTER (RODAPÉ DO CHAT) ------------------- */
+#footer_pergunta {
+    background-color: #F1F1F1; /* Cor de fundo clara */
+    width: 100%;        /* Largura total */
+    height: 79px;       /* Altura fixa */
+    display: flex;      /* Flexbox ativado */
+    justify-content: space-between; /* Distribui espaço entre os filhos */
+    align-items: center; /* Alinha verticalmente ao centro */
+    border-radius: 7px; /* Bordas arredondadas */
+    padding: 1%;        /* Espaçamento interno */
+    gap: 1%;            /* Espaço entre elementos filhos */
+}
+
+/* ------------------- BOTÕES ------------------- */
+#footer_pergunta>button, .div_card_conversa>button {
+    background-color: transparent; /* Fundo transparente */
+    border: none;                  /* Sem borda */
+}
+
+/* ------------------- TEXTAREA ------------------- */
+#footer_pergunta>textarea {
+    border: none;             /* Sem borda */
+    background-color: transparent; /* Fundo transparente */
+    width: 100%;              /* Ocupa toda largura disponível */
+    outline: none;            /* Remove contorno ao clicar */
+    resize: none;             /* Impede redimensionamento manual */
+    overflow-y: auto;         /* Scroll vertical quando o texto ultrapassa o tamanho */
+    font-size: 1em;
+}
+
+/* ------------------- CARTÕES DE MENSAGEM ------------------- */
+.div_card_conversa {
+    display: flex;            /* Flexbox ativado */
+    align-items: flex-start;  /* Alinha o conteúdo no topo */
+}
+
+.div_card_conversa>p {
+    border-radius: 7px;       /* Bordas arredondadas */
+    width: 100%;              /* Largura total do cartão */
+    max-width: 468px;         /* Máximo para não ficar muito largo */
+    min-height: 71px;         /* Altura mínima */
+    padding: 1%;              /* Espaçamento interno */
+}
+
+/* Alinhamento da mensagem do bot */
+#div_card_conversa_chat {
+    justify-content: flex-end; /* Coloca o conteúdo do bot à direita */
+    gap: 10px;                 /* Espaçamento entre elementos */
+}
+
+/* Estilo das mensagens do usuário */
+#div_card_conversa_usuario>p {
+    background-color: #F1F1F1; /* Fundo cinza claro */
+    color: #000;                /* Texto preto */
+}
+
+/* Estilo das mensagens do bot */
+#div_card_conversa_chat>p {
+    background-color: #F09600;  /* Fundo laranja */
+    color: #FFF;                 /* Texto branco */
+}
+
+/* ------------------- IMAGENS ------------------- */
+#img_audio, #img_bot {
+    border-radius: 29px;         /* Bordas arredondadas (círculo) */
+    border: 1px solid #00000020; /* Borda leve e transparente */
+    padding: 10px;               /* Espaçamento interno */
+}

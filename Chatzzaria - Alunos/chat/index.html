@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Define que o documento é HTML5 e que o idioma da página é português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres (UTF-8 suporta acentos e caracteres especiais) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a página para ser responsiva em celulares -->
+    <title>Chatzzaria</title> <!-- Título que aparece na aba do navegador -->
+
+    <!-- Ícone da aba do navegador (favicon) -->
+    <link rel="icon" href="../assets/imagens/logotipo.svg">
+
+    <!-- Importa o arquivo CSS externo com os estilos da página -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Importa o arquivo JavaScript externo (com defer para só rodar depois do carregamento da página) -->
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Início HEADER -->
+    <header id="cabecalho" class="container">
+        <!-- Logo do site (imagem da pizzaria) -->
+        <img src="../assets/imagens/logotipo.svg" alt="Logo de uma pizza com o nome Chatzzaria"> 
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main id="conteudo_principal" class="container">
+        <!-- Formulário que engloba o chat -->
+        <form>
+            <!-- Área onde as mensagens do chat vão aparecer -->
+            <div id="div_conversa">
+                <!-- Exemplo de como ficariam as mensagens (comentado para não aparecer) -->
+                <!--
+                <div id="div_card_conversa_usuario" class="div_card_conversa">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
+                <div id="div_card_conversa_chat" class="div_card_conversa">
+                    <button type="button">
+                        <img id="img_audio" src="../assets/imagens/audio.svg" alt="">
+                    </button>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <img id="img_bot" src="../assets/imagens/bot.svg" alt="">
+                </div>
+                -->
+            </div>
+
+            <!-- Rodapé da área do chat (onde o usuário digita a pergunta) -->
+            <footer id="footer_pergunta">
+                <!-- Botão para microfone (futuro uso para reconhecimento de voz) -->
+                <button type="button">
+                    <img src="../assets/imagens/microfone.svg" alt="Imagem de um microfone com a cor laranja">
+                </button>
+
+                <!-- Campo de texto onde o usuário digita a pergunta -->
+                <textarea name="" id="pergunta" placeholder="Faça uma pergunta"></textarea>
+
+                <!-- Botão de enviar pergunta -->
+                <button type="submit">
+                    <img src="../assets/imagens/enviar.svg" alt="Imagem de um avião indicando enviar">
+                </button>
+            </footer>
+        </form>
+    </main>
+</body>
+</html>
